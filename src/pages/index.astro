@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import BasicLayout from "../layouts/BasicLayout.astro";
+
+const works = await getCollection("works");
+---
+
+<BasicLayout>
+  <section>
+    <h1
+      class="font-abril flex justify-center text-[10rem] text-beige uppercase pt-[10rem] pb-[10rem]"
+    >
+      Portfolio
+    </h1>
+
+    <section class="bg-beige w-screen pb-[5rem] ">
+      <div class="flex flex-col items-center">
+      <img src="../../pdp.jpg" alt="pdp" class="size-[20rem] absolute bottom-20 rounded-[5px]">
+      <p class="text-dark flex justify-center text-[1.2rem] font-josefin pt-[18rem] text-center w-[30%]"> Bonjour ! Je suis Eloïse Marien, j'étudie le design graphique et le développement web à Limoges. Explore mon Portfolio pour découvrir mes travaux et n'hésitez pas à me contacter pour que l'on travaille ensemble ;) </p>
+      </div>
+      <div class="flex flex-col">
+        <h2 class="font-abril text-[3rem] text-orange p-[5rem] pb-[2rem]"> Mes derniers travaux ★ </h2>
+
+        <ul class="flex justify-between gap-5 ml-[5rem] mr-[5rem]">
+          {
+            works.map((work) => (
+              <li>
+                <a href={`/works/${work.id}/`}>
+                  <img class="rounded-[5px]" width={720} height={360} src={work.data.heroImage} alt="img_work1"  />
+                  <h4 class="title">{work.data.title}</h4>
+                  <p class="date">
+                    <FormattedDate date={work.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href={`/works/${work.id}/`}>
+                  <img class="rounded-[5px]" width={720} height={360} src={work.data.heroImage} alt="img_work1"  />
+                  <h4 class="title">{work.data.title}</h4>
+                  <p class="date">
+                    <FormattedDate date={work.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+
+
+              <li>
+                <a href={`/works/${work.id}/`}>
+                  <img class="rounded-[5px]" width={720} height={360} src={work.data.heroImage} alt="img_work1"  />
+                  <h4 class="title">{work.data.title}</h4>
+                  <p class="date">
+                    <FormattedDate date={work.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+
+            ))
+          }
+        </ul>
+        
+      </div>
+
+    </section>
+
+
+  </section>
+</BasicLayout>

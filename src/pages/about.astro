@@ -1,0 +1,40 @@
+---
+import BasicLayout from '../layouts/BasicLayout.astro';
+---
+
+<BasicLayout
+	title="About Me"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date('August 08 2021')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+<section class="bg-beige w-screen mt-[2rem]">
+
+	<div class="flex flex-col pb-[5rem]">
+    <h2 class="font-abril text-[3rem] pt-[5rem] pl-[5rem] text-orange"> About me ★</h2>
+    <p class="font-josefin pl-[5rem] text-[1.2rem] w-[50%] pt-2">Bonjour ! :)
+		Je m'appelle Eloïse Marien et je suis une étudiante de 19 ans, actuellement en 2ème année de BUT Métiers du Multimédia et de l'Internet (MMI) à Limoges. 
+		Je suis passionnée par de nombreuses formes d'expression artistique, comme le dessin (traditionnel et digital), scrapbooking, stylisme, ... Et plus particulièrement le théâtre avec 6 ans de pratique à mon actif ! Je suis également une grande lectrice et amatrice de jeux vidéos.
+		</p>
+	</div>
+  </section>
+
+  <section class="bg-orange text-beige font-josefin text-[1rem] flex flex-col p-[5rem]">
+	<div>
+		<h3 class="font-abril text-[3rem] pb-[1rem] text-yellow"> Mes compétences ★ </h3>
+		<div class="text-[1.2rem] flex flex-col justify-between gap-[1rem]">
+		<p> <span class="font-bold"> Web design  </span> | Réalisation de maquettes et de prototypes de sites web (UI et UX design), création de wireframes. </p>
+		<p> <span class="font-bold"> Design Graphique </span> | Créations graphiques vectorielles, création de logos , création d'icons, création d'affiches, création 3D et rendus 3D, retouches photo et édition d'images. </p>
+		<p> <span class="font-bold"> Audiovisuel </span> | Création de motion design, réalisation de vidéo publicitaire, stop motion, interview, montage vidéo, écriture de scénarios, storyboards, podcast.</p>
+		<p> <span class="font-bold"> Développement </span> | Web (HTML, CSS, SASS, Tailwind, Javascript, Astro) </p>
+		<p> <span class="font-bold"> Communication </span> | Rédaction de contenus web, réalisation de contenu pour les réseaux sociaux (visuels, photos, vidéos), présentations orales, création de plans de communication, marketing digital </p>
+		<p> <span class="font-bold"> Gestion de projet </span> | Organisation et planification de projets multimédia, management d'une équipe.</p>
+	</div>
+	</div>
+
+	<div>
+		<h3 class="font-abril text-[3rem] pb-[1rem] text-yellow pt-[3rem]"> Les outils que j'utilise ★ </h3>
+		
+	</div>
+  </section>
+</BasicLayout>

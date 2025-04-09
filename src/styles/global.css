@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --font-abril: 'abril fatface';
+    --font-josefin: 'Josefin sans';
+
+    --color-pink: #FF78A0;
+    --color-orange : #FF470B;
+    --color-yellow : #ffb51f;
+    --color-beige : #FFF3E3;
+    --color-dark : #1E1E1E;
+  }
+
+
+
+nav{
+  background-color: var(--color-pink);
+}
